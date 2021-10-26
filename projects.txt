@@ -1,71 +1,62 @@
-Title: Clustering to find background knowledge in inductive logic programming
-Suitability: Part C, MSc
+Title: Learning to program by debugging
 
-Abstract:  Inductive logic programming (ILP) [1,2] is a form of machine learning based on mathematical logic. Given examples and background knowledge (BK), the goal of ILP is to induce a hypothesis (a set of logical rules) that with the BK generalises (logically entails) the examples. One major problem is choosing appropriate BK. Given too little BK, the ILP problem is unsolvable as there is insufficient information to induce a hypothesis. Given too much BK, the problem becomes intractable as the search space is too large. The goal of this project is to improve ILP by trying to first identify relevant BK. The key idea is to reason by analogy over the examples. In other words, given a new learning task with a new set of examples, find a previous task that you have solved that is similar to the new tasks. Use the BK used in the old task in the new task. The project is a mix of theory, implementation, and experimentation.
+Suitability: MSc
 
-Prerequisites: First-order logic, and preferably logic programming concepts (Prolog and/or Answer Set Programming), or at least an interest to learn about them. Ideally some knowledge about clustering algorithms and basic machine learning.
+Abstract:  The goal of program synthesis/induction is to develop machines that can write programs for us. For instance, given examples of unsorted/sorted lists, the goal is to induce a sorting algorithm. This project focuses on inductive logic programming (ILP) [1,2], a form of machine learning based on mathematical logic. Given examples and background knowledge (BK), the goal of ILP is to induce a logic program (a set of logical rules) that with the BK generalises the examples. The goal of this project is to develop techniques to learn programs by debugging faulty programs. This project is a mix of theory, implementation, and experimentation.
+
+Prerequisites: First-order logic, and preferably logic programming concepts (Prolog and/or Answer Set Programming), or at least an interest to learn about them.
 
 [1] Inductive logic programming at 30: a new introduction. A. Cropper and S. Dumančić.
 [2] Turning 30: new ideas in inductive logic programming. A. Cropper, S. Dumančić, and S.H. Muggleton. IJCAI 2020
 
-==========
+--------------------------------------------------
 
-Title: Inducing terminating logic programs.
-Suitability: Part C, MSc
+Title: Learning to play inductive games
 
-Abstract: Inductive logic programming (ILP) [1,2] is a form of machine learning based on mathematical logic. Given examples and background knowledge (BK), the goal of ILP is to induce a logic program (a set of logical rules) that with the BK generalises the examples. Popper [3] is a state-of-the-art (SOTA) ILP system that can learn any logic program.  This expressiveness comes at an obvious cost: non-terminating programs. The goal of this project is to revise Popper so that it only considers terminating logic programs (e.g. Datalog programs). The research challenge is to explore how to syntactically prohibit Popper from considering such programs. The work is mostly theory with a small amount of programming (answer set programming) and experimentation.
+Suitability: Part B, Part C, MSc
 
-Prerequisites: background in first-order logic and logic programming, preferably answer set programming
+Abstract: Inductive games, such as Zendo and Eleusis, involve a player using inductive reasoning to discover an unknown set of rules. The goal of this project is to apply state-of-the-art inductive logic programming (ILP) [1,2] to these games. ILP is a form of machine learning based on mathematical logic. Given examples and background knowledge (BK), the goal of ILP is to induce a logic program (a set of logical rules) that with the BK generalises the examples. The challenge is to adapt or revise the existing approaches to these games. The work is mostly implementation and experimentation.
+
+Prerequisites: first-order logic and logic programming, ideally Prolog and answer set programming (or an interest in learning about it)
 
 [1] Inductive logic programming at 30: a new introduction. A. Cropper and S. Dumančić.
 [2] Turning 30: new ideas in inductive logic programming. A. Cropper, S. Dumančić, and S.H. Muggleton. IJCAI 2020
 [3] Learning programs by learning from failures. A. Cropper and R. Morel. Machine Learning 2021.
 
-==================================================
+--------------------------------------------------
 
-Title: An experimental test of Occam’s razor in inductive logic programming
-Suitability: Part C, MSc
+Title: Learning programs with new objects
 
-Abstract:  A widely persisting interpretation of Occam's razor is that given two hypotheses with the same training error, the simpler hypothesis is more likely to generalise better. However, results from computational learning theory does not support this claim, nor do empirical studies on classification tasks [5]. Domingos [4] argues that that model complexity is only a confounding factor usually correlated with the number of hypotheses from which a learner considers. In other words, Domingos argues that poor generalisation follows from the number of hypotheses tested rather than the complexity of the selected hypothesis.  The goal of this project is to test Domingo's hypothesis in the field of inductive logic programming [1,2]. The project will use a state-of-the-art ILP system [3] with which we can test the hypothesis.
+Suitability: MSc
+
+Abstract:  Scientists often posit the existence of unknown objects to explain empirical observations. However, existing machine learning approaches struggle to perform similar reasoning. To address this limitation, the goal of this project is to develop an inductive logic programming (ILP) system [1,2] that can invent new objects to explain observations.  The project is a mix of theory, implementation, and experimentation.
+
+Prerequisites: logic programming (preferably answer set programming and Prolog)
+
+[1] Inductive logic programming at 30: a new introduction. A. Cropper and S. Dumančić.
+[2] Turning 30: new ideas in inductive logic programming. A. Cropper, S. Dumančić, and S.H. Muggleton. IJCAI 2020
+
+--------------------------------------------------
+
+Title: Learning programs by decomposing examples
+
+Suitability: MSc
+
+Abstract:  Inductive logic programming (ILP) is a form of machine learning based on mathematical logic. Given examples and background knowledge (BK), the goal of ILP is to induce a hypothesis (a set of logical rules) that with the BK generalises (logically entails) the examples.  A major problem in ILP is learning large programs. The goal of this project is to overcome this limitation by exploring methods to decompose problems into smaller problems. The project is a mix of theory, implementation, and experimentation.
+
+Prerequisites: First-order logic, and preferably logic programming concepts (Prolog and/or Answer Set Programming), or at least an interest to learn about them.
 
 [1] Inductive logic programming at 30: a new introduction. A. Cropper and S. Dumančić.
 [2] Turning 30: new ideas in inductive logic programming. A. Cropper, S. Dumančić, and S.H. Muggleton. IJCAI 2020
 [3] Learning programs by learning from failures. A. Cropper and R. Morel. Machine Learning 2021.
-[4] The Role of Occam's Razor in Knowledge Discovery. Pedro M. Domingos. Data Mining and Knowledge Discovery 1999.
-[5] An experimental test of Occam's razor in classification. Jan Zahálka, Filip Zelezný. Machine Learning 2011
-
-==================================================
-
-Title: Lifelong learning of logic programs
-Suitability: Part B, Part C
-
-Abstract: Inductive logic programming (ILP) [1,2] is a form of machine learning based on mathematical logic. Given examples and background knowledge (BK), the goal of ILP is to induce a logic program (a set of logical rules) that with the BK generalises the examples.  The idea of multi-task ILP [3,4,5] is to learn solutions to a set of problems, whereby solutions can be reused to solve other problems, such as learning the definition of append to help learn the definition of quicksort. The purpose of this project is to experimentally compare different multi-task learning approaches The project is a mix of implementation and experimentation.
-
-Prerequisites: logic programming (answer set programming and Prolog)
-
-[1] Inductive logic programming at 30: a new introduction. A. Cropper and S. Dumančić.
-[2] Turning 30: new ideas in inductive logic programming. A. Cropper, S. Dumančić, and S.H. Muggleton. IJCAI 2020
-[3] Bias reformulation for one-shot function induction. Dianhuan Lin, Eyal Dechter, Kevin Ellis, Joshua B. Tenenbaum, Stephen Muggleton. ECAI 2014.
-[4] Forgetting to Learn Logic Programs. Andrew Cropper. AAAI 2020.
-[5] Playgol: Learning Programs Through Play. Andrew Cropper. IJCAI 2019.
 
 
-==================================================
+----------
 
-Title: How good are inductive logic programming systems?
-Suitability: Part B, Part C, MSc
+Title: Optimal inverse entailment
 
-Abstract: Inductive logic programming (ILP) [1,2] is a form of machine learning based on mathematical logic. Given examples and background knowledge (BK), the goal of ILP is to induce a logic program (a set of logical rules) that with the BK generalises the examples.  For instance, given input/output examples of unsorted/sorted lists, an ILP system can learn the quicksort algorithm. Many ILP systems have been developed, yet there is no extensive empirical evaluation of these systems. The purpose of this project is to experimentally compare different ILP systems on many dimensions on many problems, such as game playing, robot planning, drug design. The project is a mix of implementation and experimentation.
+Suitability: MSc
 
-Prerequisites: ideally some experience of Prolog, but it is no necessary
-[1] Inductive logic programming at 30: a new introduction. A. Cropper and S. Dumančić.
-[2] Turning 30: new ideas in inductive logic programming. A. Cropper, S. Dumančić, and S.H. Muggleton. IJCAI 2020
+Abstract: Inductive logic programming (ILP) [1,2] is a form of machine learning based on mathematical logic. Given examples and background knowledge (BK), the goal of ILP is to induce a logic program (a set of logical rules) that with the BK generalises the examples. Inverse entailment (IE) [3] is a powerful ILP technique that greatly reduces the hypothesis search complexity. However, IE approaches (i) learn overly large and complex programs, (ii) struggle to learn recursive programs, and (iii) require several parameters from the user, which makes them cumbersome to use. The goal of this project is to develop provably optimal IE techniques. The idea is to harness the latest advances in SAT and ASP solvers. The work is a mix of theory, implementation, and experimentation.
 
-==================================================
-
-Title: How good are logic programming systems?
-Suitability: Part B, Part C, MSc
-
-Abstract: Logic programming (ILP) is a programming paradigm. In contrast to imperative programs, such as C, Java, and Python, logic programs are declarative, in that the order of rules and statements in the programs does not matter. In contrast to functional programs, such as Haskell, logic programs learn relations. There are many forms of logic programming, such as Datalog, Prolog, and Answer Set programming. Furthermore, there are various logic programming engines, such as YAP, SWIPL, GNU, and XSB just for Prolog. The purpose of this project is to experimentally compare different logic programming systems on many dimensions on many problems. The project is a mix of implementation and experimentation.
-
-Prerequisites: ideally some experience of Prolog, but it is no necessary
+Prerequisites: first-order logic and logic programming (answer set programming and Prolog)
